@@ -234,6 +234,17 @@ function CONTROL(event) {
     }
 }
 
+// Mobile Controls
+const leftBtn = document.getElementById('left-btn');
+const rotateBtn = document.getElementById('rotate-btn');
+const rightBtn = document.getElementById('right-btn');
+const downBtn = document.getElementById('down-btn');
+
+leftBtn.addEventListener('click', () => { if(!gameOver) p.moveLeft(); });
+rotateBtn.addEventListener('click', () => { if(!gameOver) p.rotate(); });
+rightBtn.addEventListener('click', () => { if(!gameOver) p.moveRight(); });
+downBtn.addEventListener('click', () => { if(!gameOver) p.moveDown(); });
+
 // drop the piece every 1sec
 let dropStart = Date.now();
 let gameOver = false;
